@@ -6,8 +6,8 @@
 
 class GameController {
 private:
-    GameView view;
-    GameModel model;
+    GameView& view;
+    GameModel& model;
 
 public:
     GameController(GameView& v, GameModel& m);

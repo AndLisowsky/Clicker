@@ -1,10 +1,15 @@
 #include "gameview.h"
 #include <iostream>
+#include <cstdio>
 
 void GameView::printData(int points) {
-    std::cout << "Zdobyte punkty: " << points << std::endl;
+    std::cout << "Points: " << points << std::endl;
 }
 
 void GameView::printStartHeader() {
-    std::cout << "Canary Clicker v0.1" << std::endl;
+    std::cout << "Canary Clicker v0.5" << std::endl;
+}
+
+char GameView::getUserInput() {
+    return getchar();
 }

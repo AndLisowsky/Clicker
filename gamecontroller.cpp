@@ -4,17 +4,15 @@
 GameController::GameController(GameView& v, GameModel& m) : view(v), model(m) {}
 
 void GameController::launch() {
-    char input;
     view.printStartHeader();
-
+    view.printData(model.getPoints());
     while (true) {
-        std::cin >> input;
-
+        char input = view.getUserInput();
         if (input == 'b') {
             model.addPoint();
             view.printData(model.getPoints());
         } else if (input == 'e') {
-            std::cout << "Zamykanie programu..." << std::endl;
+            std::cout << "Shutting down..." << std::endl;
             break;
         }
     }

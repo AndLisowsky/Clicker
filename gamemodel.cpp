@@ -1,5 +1,4 @@
 #include "gamemodel.h"
-#include <iostream>
 
 GameModel::GameModel() : points(0) {}
 
