@@ -1,8 +1,11 @@
-//
-// Created by Canary on 3/23/2024.
-//
+#ifndef GAMEVIEW_H
+#define GAMEVIEW_H
 
-#ifndef PROJEKT2_CLICKER_GAMEVIEW_H
-#define PROJEKT2_CLICKER_GAMEVIEW_H
+class GameView {
 
-#endif //PROJEKT2_CLICKER_GAMEVIEW_H
+public:
+    void printData(int points);
+    void printStartHeader();
+};
+
+#endif

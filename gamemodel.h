@@ -1,16 +1,14 @@
-//
-// Created by Canary on 3/23/2024.
-//
+#ifndef GAMEMODEL_H
+#define GAMEMODEL_H
 
-#ifndef PROJEKT2_CLICKER_GAMEMODEL_H
-#define PROJEKT2_CLICKER_GAMEMODEL_H
-
-class Points {
-public:
-    void addPoint();
-    const int getPoints();
+class GameModel {
 private:
     int points;
+
+public:
+    GameModel();
+    void addPoint();
+    int getPoints() const;
 };
 
-#endif //PROJEKT2_CLICKER_GAMEMODEL_H
+#endif

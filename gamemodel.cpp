@@ -1,12 +1,12 @@
-//
-// Created by Canary on 3/23/2024.
-//
-
 #include "gamemodel.h"
 #include <iostream>
 
-Points::Points() {}
+GameModel::GameModel() : points(0) {}
 
-void Points::addPoint() {
+void GameModel::addPoint() {
+    points++;
+}
 
+int GameModel::getPoints() const {
+    return points;
 }

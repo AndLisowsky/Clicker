@@ -1,8 +1,17 @@
-//
-// Created by Canary on 3/23/2024.
-//
+#ifndef GAMECONTROLLER_H
+#define GAMECONTROLLER_H
 
-#ifndef PROJEKT2_CLICKER_GAMECONTROLLER_H
-#define PROJEKT2_CLICKER_GAMECONTROLLER_H
+#include "gameview.h"
+#include "gamemodel.h"
 
-#endif //PROJEKT2_CLICKER_GAMECONTROLLER_H
+class GameController {
+private:
+    GameView view;
+    GameModel model;
+
+public:
+    GameController(GameView& v, GameModel& m);
+    void launch();
+};
+
+#endif
