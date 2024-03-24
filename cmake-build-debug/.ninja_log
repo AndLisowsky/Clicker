@@ -1,0 +1,7 @@
+# ninja log v5
+9	96	7330028025915832	CMakeFiles/Projekt2_clicker.dir/gamemodel.cpp.obj	5ec8389588c7fd3e
+1	401	7330028028936518	CMakeFiles/Projekt2_clicker.dir/clicker.cpp.obj	b2dc70dabe4d4024
+13	403	7330028028946517	CMakeFiles/Projekt2_clicker.dir/gameview.cpp.obj	a92378a9df108421
+7	341	7330028830663450	CMakeFiles/Projekt2_clicker.dir/gamemodel.cpp.obj	5ec8389588c7fd3e
+3	346	7330028830703450	CMakeFiles/Projekt2_clicker.dir/gamecontroller.cpp.obj	cef7be49d4338647
+346	478	7330028831978557	Projekt2_clicker.exe	3e292301666494b0
