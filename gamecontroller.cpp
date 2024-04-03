@@ -5,13 +5,15 @@ GameController::GameController(GameView& v, GameModel& m) : view(v), model(m) {}
 
 void GameController::launch() {
     view.printStartHeader();
-    view.printData(model.getPoints());
+    view.loadGame(model.getPoints(), model.getLevel());
+    view.printData(model.getPoints(), model.getLevel());
     while (true) {
         char input = view.getUserInput();
-        if (input == 'b') {
+        if (input == pointAddCondition) {
             model.addPoint();
-            view.printData(model.getPoints());
-        } else if (input == 'e') {
+            view.printData(model.getPoints(), model.getLevel());
+        } else if (input == exitCondition) {
+            view.saveGame(model.getPoints(), model.getLevel());
             std::cout << "Shutting down..." << std::endl;
             break;
         }

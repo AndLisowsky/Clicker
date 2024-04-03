@@ -5,13 +5,15 @@
 #include "gamemodel.h"
 
 class GameController {
-private:
-    GameView& view;
-    GameModel& model;
 
 public:
     GameController(GameView& v, GameModel& m);
     void launch();
+private:
+    GameView& view;
+    GameModel& model;
+    const char exitCondition = 'e';
+    const char pointAddCondition = 'b';
 };
 
 #endif
