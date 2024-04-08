@@ -8,9 +8,6 @@ public:
     void printStartHeader();
     char getUserInput();
     std::string toRoman(int num);
-
-    void saveGame(int points, int level);
-    void loadGame(int points, int level);
 };
 
 #endif

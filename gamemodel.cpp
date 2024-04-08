@@ -16,25 +16,25 @@ int GameModel::getPoints() const {
 int GameModel::getLevel() const {
     return level;
 }
-void GameModel::saveToFile(const std::string& filename) const {
-    std::ofstream file(filename, std::ios::out | std::ios::trunc); // Ustawiamy flagę ios::trunc, aby w przypadku istnienia pliku, nadpisać go
+void GameModel::saveToFile(const std::string &filename) const {
+    std::ofstream file(filename);
     if (file.is_open()) {
-        file << points << " " << level;
+        file << points << std::endl;
+        file << level << std::endl;
+        file.close();
         std::cout << "Saved." << std::endl;
     } else {
-        std::cerr << "Error." << std::endl;
+        std::cerr << "Unable to save file." << std::endl;
     }
-    file.close();
 }
 
-
-void GameModel::loadFromFile(const std::string& filename) {
+void GameModel::loadFromFile(const std::string &filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
-        file >> points >> level;
-        std::cout << "Game loaded." << std::endl;
+        file >> points;
+        file >> level;
+        file.close();
     } else {
-        std::cerr << "Game load error." << std::endl;
+        std::cerr << "Unable to open file." << std::endl;
     }
-    file.close();
 }

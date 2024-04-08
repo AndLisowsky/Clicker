@@ -5,7 +5,7 @@ GameController::GameController(GameView& v, GameModel& m) : view(v), model(m) {}
 
 void GameController::launch() {
     view.printStartHeader();
-    view.loadGame(model.getPoints(), model.getLevel());
+    model.loadFromFile("gamestate.txt");
     view.printData(model.getPoints(), model.getLevel());
     while (true) {
         char input = view.getUserInput();
@@ -13,7 +13,7 @@ void GameController::launch() {
             model.addPoint();
             view.printData(model.getPoints(), model.getLevel());
         } else if (input == exitCondition) {
-            view.saveGame(model.getPoints(), model.getLevel());
+            model.saveToFile("gamestate.txt");
             std::cout << "Shutting down..." << std::endl;
             break;
         }

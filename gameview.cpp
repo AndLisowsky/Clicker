@@ -1,5 +1,4 @@
 #include "gameview.h"
-#include "gamemodel.h"
 #include <iostream>
 #include <cstdio>
 #include <vector>
@@ -29,16 +28,4 @@ std::string GameView::toRoman(int num) {
     }
 
     return roman;
-}
-
-void GameView::saveGame(int points, int level) {
-    GameModel model;
-    model.saveToFile("game_state.txt");
-}
-
-void GameView::loadGame(int points, int level) {
-    GameModel model;
-    model.loadFromFile("game_state.txt");
-    points = model.getPoints();
-    level = model.getLevel();
 }
